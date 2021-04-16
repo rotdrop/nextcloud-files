@@ -21,7 +21,7 @@
  *
  */
 
-import { getCanonicalLocale } from '@nextcloud/l10n'
+import { getLanguage } from '@nextcloud/l10n'
 
 const humanList = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
 const humanListBinary = ['B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB'];
@@ -58,7 +58,7 @@ export function formatFileSize(size: number|string, skipSmallSizes: boolean = fa
 	if (order < 2) {
 		relativeSize = parseFloat(relativeSize).toFixed(0);
 	} else {
-		relativeSize = parseFloat(relativeSize).toLocaleString(getCanonicalLocale());
+		relativeSize = parseFloat(relativeSize).toLocaleString(getLanguage());
 	}
 
 	return relativeSize + ' ' + readableFormat;
