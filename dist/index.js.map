@@ -1,0 +1,1 @@
+{"version":3,"sources":["../lib/index.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA","sourcesContent":["export { formatFileSize } from './humanfilesize'\n"],"file":"index.js"}
