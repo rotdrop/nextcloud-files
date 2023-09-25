@@ -58,7 +58,8 @@ export function formatFileSize(size: number|string, skipSmallSizes: boolean = fa
 	if (order < 2) {
 		relativeSize = parseFloat(relativeSize).toFixed(0);
 	} else {
-		relativeSize = parseFloat(relativeSize).toLocaleString(getCanonicalLocale());
+		const locale = getCanonicalLocale().split('.')[0];
+		relativeSize = parseFloat(relativeSize).toLocaleString(locale);
 	}
 
 	return relativeSize + ' ' + readableFormat;
